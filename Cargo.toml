@@ -1,0 +1,9 @@
+[workspace]
+members = [
+    "crates/git-rewind-cli",
+    "crates/git-rewind-core",
+    "crates/git-rewind-git",
+    "crates/git-rewind-ui"
+]
+
+resolver = "2"
