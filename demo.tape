@@ -4,7 +4,7 @@
 
 Output assets/demo.gif
 
-Set Shell "powershell"
+Set Shell "bash"
 Set FontSize 14
 Set Width 1200
 Set Height 650
@@ -14,12 +14,12 @@ Set TypingSpeed 80ms
 Set PlaybackSpeed 0.8
 
 # ── Start in the repo ──────────────────────────────────────────────────────────
-Type "cd C:\Users\Gagandeep\project\git-rewind"
+Type "cd /mnt/c/Users/Gagandeep/project/git-rewind"
 Enter
 Sleep 500ms
 
 # ── Show what we're about to launch ────────────────────────────────────────────
-Type ".\target\debug\git-rewind-ui.exe"
+Type "./target/debug/git-rewind-ui.exe"
 Enter
 Sleep 1.5s          # wait for TUI to paint
 
