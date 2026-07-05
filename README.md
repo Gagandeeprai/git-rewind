@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/social-preview.png" alt="git-rewind banner" width="100%"/>
+  <img src="assets/social-preview.png?v=2" alt="git-rewind banner" width="100%"/>
 </p>
 
 ---
