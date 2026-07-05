@@ -37,18 +37,8 @@
 ## Demo
 
 <p align="center">
-  <img src="assets/social-preview.png" alt="git-rewind social preview" width="100%"/>
+  <img src="assets/demo.gif" alt="git-rewind demo" width="100%"/>
 </p>
-
-> **To add a live demo GIF**, record your terminal with [`vhs`](https://github.com/charmbracelet/vhs):
-> ```bash
-> # Install vhs (requires Go)
-> go install github.com/charmbracelet/vhs@latest
->
-> # Record a demo tape
-> vhs demo.tape   # outputs assets/demo.gif
-> ```
-> Then embed it with `![demo](assets/demo.gif)` and set `assets/social-preview.png` in **GitHub → Settings → Social preview**.
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
