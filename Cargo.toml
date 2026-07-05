@@ -32,7 +32,3 @@ paste = { path = "crates/paste-patch" }
 
 [workspace.lints.rust]
 unexpected_cfgs = { level = "allow", check-cfg = ["cfg(no_literal_fromstr)"] }
-
-
-
-

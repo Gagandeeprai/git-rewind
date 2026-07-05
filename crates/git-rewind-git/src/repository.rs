@@ -9,7 +9,6 @@ use std::fmt;
 /// This encapsulates all interaction with the Git backend, preventing
 /// direct dependency on `git2` types across other parts of the application.
 pub struct RepositoryHandle {
-    #[allow(dead_code)]
     inner: Repository,
 }
 

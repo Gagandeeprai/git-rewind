@@ -11,8 +11,6 @@ git2.workspace = true
 thiserror.workspace = true
 git-rewind-core.workspace = true
 
-
-
 [dev-dependencies]
 tempfile.workspace = true
 

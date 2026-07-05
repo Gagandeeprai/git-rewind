@@ -40,32 +40,3 @@ name = "paste"
 path = "src/lib.rs"
 proc-macro = true
 
-[[test]]
-name = "test_item"
-path = "tests/test_item.rs"
-
-[[test]]
-name = "test_attr"
-path = "tests/test_attr.rs"
-
-[[test]]
-name = "compiletest"
-path = "tests/compiletest.rs"
-
-[[test]]
-name = "test_doc"
-path = "tests/test_doc.rs"
-
-[[test]]
-name = "test_expr"
-path = "tests/test_expr.rs"
-
-[dev-dependencies.paste-test-suite]
-version = "0"
-
-[dev-dependencies.rustversion]
-version = "1.0"
-
-[dev-dependencies.trybuild]
-version = "1.0.49"
-features = ["diff"]

@@ -13,7 +13,7 @@ pub(super) fn parse_entry(
 
     let timestamp = map_timestamp(entry.committer().when());
 
-    let raw_msg = entry.message().unwrap_or(None).unwrap_or("");
+    let raw_msg = entry.message().unwrap_or("");
     let (action, message) = parse_message(raw_msg);
 
     Ok(ReflogEntry {
