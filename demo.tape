@@ -19,9 +19,9 @@ Enter
 Sleep 500ms
 
 # ── Show what we're about to launch ────────────────────────────────────────────
-Type "cargo run --bin git-rewind-ui"
+Type ".\target\debug\git-rewind-ui.exe"
 Enter
-Sleep 4s          # wait for TUI to paint
+Sleep 1.5s          # wait for TUI to paint
 
 # ── Navigate down the timeline ─────────────────────────────────────────────────
 Down
