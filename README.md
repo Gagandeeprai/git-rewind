@@ -145,15 +145,15 @@ graph BT
 ```mermaid
 graph TD
     subgraph UI["git-rewind-ui"]
-        RENDER[render/ - Renderer, Layout, Theme]
-        STATE[state/ - AppState, Selection, Dialog]
-        ACTIONS[actions/ - Mapper, Reducer]
-        RUNTIME[runtime/ - Event loop, TerminalGuard]
+        RENDER["render/ - Renderer, Layout, Theme"]
+        STATE["state/ - AppState, Selection, Dialog"]
+        ACTIONS["actions/ - Mapper, Reducer"]
+        RUNTIME["runtime/ - Event loop, TerminalGuard"]
     end
 
     subgraph CLI["git-rewind-cli"]
         SERVICE[AppService]
-        CLI_PARSE[cli/ + commands/]
+        CLI_PARSE["cli/ + commands/"]
     end
 
     subgraph GIT["git-rewind-git"]
@@ -164,8 +164,8 @@ graph TD
     end
 
     subgraph CORE["git-rewind-core"]
-        TYPES[reflog/ - Entry, Action]
-        TIMELINE[timeline/ - Item, project()]
+        TYPES["reflog/ - Entry, Action"]
+        TIMELINE["timeline/ - Item, project()"]
     end
 
     RUNTIME -->|polls| RENDER
@@ -174,9 +174,14 @@ graph TD
     RENDER -->|reads| STATE
     RUNTIME -->|calls| SERVICE
     SERVICE -->|queries| REPO
-    REPO --> REFLOG & COMMIT & DIFF
+    REPO --> REFLOG
+    REPO --> COMMIT
+    REPO --> DIFF
     REFLOG --> TYPES
-    COMMIT & DIFF --> TYPES & TIMELINE
+    COMMIT --> TYPES
+    COMMIT --> TIMELINE
+    DIFF --> TYPES
+    DIFF --> TIMELINE
 ```
 
 ---
@@ -187,12 +192,12 @@ The TUI follows a strict unidirectional architecture. The renderer only reads st
 
 ```mermaid
 flowchart TD
-    A[Keyboard Input] --> B[events.rs<br/>crossterm &#8594; Key enum]
-    B --> C[mapper.rs<br/>map_event_to_action]
-    C --> D[reducer.rs<br/>reduce &mut state]
+    A[Keyboard Input] --> B["events.rs<br/>crossterm -> Key enum"]
+    B --> C["mapper.rs<br/>map_event_to_action"]
+    C --> D["reducer.rs<br/>reduce(state, action)"]
     D --> E{ReduceResult}
-    E -->|Continue| F[renderer.rs<br/>Renderer::render]
-    E -->|Quit| G[Restore terminal, exit]
+    E -->|Continue| F["renderer.rs<br/>Renderer::render"]
+    E -->|Quit| G["Restore terminal, exit"]
     E -->|ResetRepository| H[AppService.reset_repository]
     H --> I[Reload timeline]
     I --> F
