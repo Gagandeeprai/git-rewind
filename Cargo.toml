@@ -7,3 +7,32 @@ members = [
 ]
 
 resolver = "2"
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/Gagandeeprai/git-rewind"
+rust-version = "1.88"
+
+[workspace.dependencies]
+clap = { version = "4.5", features = ["derive"] }
+anyhow = "1"
+git2 = "0.21"
+thiserror = "1"
+tempfile = "3"
+git-rewind-cli = { path = "crates/git-rewind-cli" }
+git-rewind-core = { path = "crates/git-rewind-core" }
+git-rewind-git = { path = "crates/git-rewind-git" }
+git-rewind-ui = { path = "crates/git-rewind-ui" }
+ratatui = "0.29"
+crossterm = "0.28"
+
+[patch.crates-io]
+paste = { path = "crates/paste-patch" }
+
+[workspace.lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = ["cfg(no_literal_fromstr)"] }
+
+
+
+
