@@ -14,6 +14,10 @@
   <i>A terminal-native UI for browsing your Git reflog timeline, inspecting commits, and rewinding to any past state — with dirty-tree warnings and one-key confirmation.</i>
 </p>
 
+<p align="center">
+  <img src="assets/social-preview.png" alt="git-rewind banner" width="100%"/>
+</p>
+
 ---
 
 ## Table of Contents
