@@ -42,14 +42,14 @@
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
-│  ╔══════════════════════════════════════════════════════════════╗ │
-│  ║  Git Rewind — Safe State Travel                            ║ │
-│  ║  Browse reflog, check diffs, rewind safely.                ║ │
-│  ╚══════════════════════════════════════════════════════════════╝ │
+│  ╔══════════════════════════════════════════════════════════════╗│
+│  ║  Git Rewind — Safe State Travel                              ║│
+│  ║  Browse reflog, check diffs, rewind safely.                  ║│
+│  ╚══════════════════════════════════════════════════════════════╝│
 │  ┌──────────────────────────┐ ┌────────────────────────────────┐ │
 │  │ Git Rewind               │ │ Commit Details                 │ │
-│  │ ▶ first commit           │ │ Commit: a1b2c3d [full SHA]     │ │
-│  │   second commit          │ │ Author: Name &lt;email&gt;           │ │
+│  │ ->first commit           │ │ Commit: a1b2c3d [full SHA]     │ │
+│  │   second commit          │ │ Author: Name &lt;email&gt;     │ │
 │  │   third commit           │ │ Date:   1620000000             │ │
 │  │                          │ │                                │ │
 │  │                          │ │ message summary here           │ │
